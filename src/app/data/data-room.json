@@ -1,0 +1,179 @@
+[
+    {
+        "id": 1,
+        "slug": "the-ritz-carlton",
+        "image": "/assets/images/pages/room/1.webp",
+        "bannerImg": "/assets/images/pages/room/1.webp",
+        "title": "The Ritz-Carlton",
+        "price": "100$",
+        "author" : "Mack jon",
+        "authorImg": "author__one.png",
+        "publishedDate": "20 Aug 2024"
+    },
+    {
+        "id": 2,
+        "slug": "four-seasons-hotels",
+        "image": "/assets/images/pages/room/2.webp",
+        "bannerImg": "/assets/images/pages/room/2.webp",
+        "title": "Four Seasons Hotels",
+        "price": "130$",
+        "author" : "Mack jon",
+        "authorImg": "author__one.png",
+        "publishedDate": "20 Aug 2024"
+    },
+    {
+        "id": 3,
+        "slug": "waldorf-astoria-hotels",
+        "image": "/assets/images/pages/room/3.webp",
+        "bannerImg": "/assets/images/pages/room/3.webp",
+        "title": "Waldorf Astoria Hotels",
+        "price": "120$",
+        "author" : "Mack jon",
+        "authorImg": "author__one.png",
+        "publishedDate": "20 Aug 2024"
+    },
+    {
+        "id": 4,
+        "slug": "the-ritz-carlton-2",
+        "image": "/assets/images/pages/room/4.webp",
+        "bannerImg": "/assets/images/pages/room/4.webp",
+        "title": "Timberline Hideaway Hotel",
+        "price": "150$",
+        "author" : "Mack jon",
+        "authorImg": "author__one.png",
+        "publishedDate": "20 Aug 2024"
+    },
+    {
+        "id": 5,
+        "slug": "the-ritz-carlton-3",
+        "image": "/assets/images/pages/room/5.webp",
+        "bannerImg": "/assets/images/pages/room/5.webp",
+        "title": "Rocky Ridge Room",
+        "price": "100$",
+        "author" : "Mack jon",
+        "authorImg": "author__one.png",
+        "publishedDate": "20 Aug 2024"
+    },
+    {
+        "id": 6,
+        "slug": "the-ritz-carlton-4",
+        "image": "/assets/images/pages/room/6.webp",
+        "bannerImg": "/assets/images/pages/room/6.webp",
+        "title": "The Ritz-Carlton",
+        "price": "100$",
+        "author" : "Mack jon",
+        "authorImg": "author__one.png",
+        "publishedDate": "20 Aug 2024"
+    },
+    {
+        "id": 7,
+        "slug": "the-ritz-carlton-5",
+        "image": "/assets/images/pages/room/1.webp",
+        "bannerImg": "/assets/images/pages/room/1.webp",
+        "title": "Four Seasons Hotels",
+        "price": "150$",
+        "author" : "Mack jon",
+        "authorImg": "author__one.png",
+        "publishedDate": "20 Aug 2024"
+    },
+    {
+        "id": 8,
+        "slug": "the-ritz-carlton-6",
+        "image": "/assets/images/pages/room/2.webp",
+        "bannerImg": "/assets/images/pages/room/2.webp",
+        "title": "Waldorf Astoria Hotels",
+        "price": "130$",
+        "author" : "Mack jon",
+        "authorImg": "author__one.png",
+        "publishedDate": "20 Aug 2024"
+    },
+    {
+        "id": 9,
+        "slug": "the-ritz-carlton-7",
+        "image": "/assets/images/pages/room/3.webp",
+        "bannerImg": "/assets/images/pages/room/3.webp",
+        "title": "Rocky Ridge Room",
+        "price": "100$",
+        "author" : "Mack jon",
+        "authorImg": "author__one.png",
+        "publishedDate": "20 Aug 2024"
+    },
+    {
+        "id": 10,
+        "slug": "the-ritz-carlton-8",
+        "image": "/assets/images/pages/room/4.webp",
+        "bannerImg": "/assets/images/pages/room/4.webp",
+        "title": "Timberline Hideaway Hotel",
+        "price": "100$",
+        "author" : "Mack jon",
+        "authorImg": "author__one.png",
+        "publishedDate": "20 Aug 2024"
+    },
+    {
+        "id": 11,
+        "slug": "the-ritz-carlton-9",
+        "image": "/assets/images/pages/room/5.webp",
+        "bannerImg": "/assets/images/pages/room/5.webp",
+        "title": "The Ritz-Carlton",
+        "price": "100$",
+        "author" : "Mack jon",
+        "authorImg": "author__one.png",
+        "publishedDate": "20 Aug 2024"
+    },
+    {
+        "id": 12,
+        "slug": "the-ritz-carlton-10",
+        "image": "/assets/images/pages/room/6.webp",
+        "bannerImg": "/assets/images/pages/room/6.webp",
+        "title": "Four Seasons Hotels",
+        "price": "100$",
+        "author" : "Mack jon",
+        "authorImg": "author__one.png",
+        "publishedDate": "20 Aug 2024"
+    },
+    {
+        "id": 13,
+        "slug": "the-ritz-carlton-11",
+        "image": "/assets/images/pages/room/1.webp",
+        "bannerImg": "/assets/images/pages/room/1.webp",
+        "title": "Waldorf Astoria Hotels",
+        "price": "100$",
+        "author" : "Mack jon",
+        "authorImg": "author__one.png",
+        "publishedDate": "20 Aug 2024"
+    },
+    {
+        "id": 14,
+        "slug": "the-ritz-carlton-11",
+        "image": "/assets/images/index-4/room/2.webp",
+        "bannerImg": "/assets/images/index-4/room/2.webp",
+        "title": "Rocky Ridge Room",
+        "price": "100$",
+        "author" : "Mack jon",
+        "authorImg": "author__one.png",
+        "publishedDate": "20 Aug 2024"
+    },
+    {
+        "id": 15,
+        "slug": "the-ritz-carlton-11",
+        "image": "/assets/images/index-4/room/3.webp",
+        "bannerImg": "/assets/images/index-4/room/3.webp",
+        "title": "Timberline Hideaway Hotel",
+        "price": "100$",
+        "author" : "Mack jon",
+        "authorImg": "author__one.png",
+        "publishedDate": "20 Aug 2024"
+    },
+    {
+        "id": 16,
+        "slug": "the-ritz-carlton-11",
+        "image": "/assets/images/index-4/room/4.webp",
+        "bannerImg": "/assets/images/index-4/room/4.webp",
+        "title": "The Ritz-Carlton",
+        "price": "100$",
+        "author" : "Mack jon",
+        "authorImg": "author__one.png",
+        "publishedDate": "20 Aug 2024"
+    }
+
+]
