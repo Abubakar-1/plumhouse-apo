@@ -46,9 +46,9 @@ function BannerOne() {
                         Luxury Stay Hotel Experience Comfort &amp; Elegance
                       </h1>
                       <p className="sub__text">
-                        Choosing Bokinn was one of the best decisions we've ever
-                        made. They have proven to be a reliable and innovative
-                        partner
+                        Choosing PlumHouse Apo was one of the best decisions
+                        we've ever made. They have proven to be a reliable and
+                        innovative partner
                       </p>
                       <Link
                         href="/room-two"
@@ -76,9 +76,9 @@ function BannerOne() {
                       </span>
                       <h1>Lavish Getaway A Blend of Comfort &amp; Style</h1>
                       <p className="sub__text">
-                        Choosing Bokinn was one of the best decisions we've ever
-                        made. They have proven to be a reliable and innovative
-                        partner
+                        Choosing PlumHouse Apo was one of the best decisions
+                        we've ever made. They have proven to be a reliable and
+                        innovative partner
                       </p>
                       <Link
                         href="/room-one"
@@ -106,9 +106,9 @@ function BannerOne() {
                       </span>
                       <h1> A Perfect Fusion of Comfort and Elegance</h1>
                       <p className="sub__text">
-                        Choosing Bokinn was one of the best decisions we've ever
-                        made. They have proven to be a reliable and innovative
-                        partner
+                        Choosing PlumHouse Apo was one of the best decisions
+                        we've ever made. They have proven to be a reliable and
+                        innovative partner
                       </p>
                       <Link
                         href="/room-one"

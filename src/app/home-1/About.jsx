@@ -66,11 +66,11 @@ function AboutOne() {
                 className="content__subtitle wow fadeInUp"
                 data-wow-delay=".3s"
               >
-                Welcome to Bokinn, where luxury meets comfort in the heart of
-                Canada. Since 1999, we have been dedicated to providing an
-                exceptional stay for our guests, blending modern amenities with
-                timeless elegance. Our beautifully designed rooms and suites
-                offer stunning views and plush accommodations, ensuring a
+                Welcome to PlumHouse Apo, where luxury meets comfort in the
+                heart of Abuja. Since 2024, we have been dedicated to providing
+                an exceptional stay for our guests, blending modern amenities
+                with timeless elegance. Our beautifully designed rooms and
+                suites offer stunning views and plush accommodations, ensuring a
                 restful retreat whether you're here for business or leisure.
               </p>
               <Link
