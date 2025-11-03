@@ -79,7 +79,7 @@ function HeaderOne() {
                   <img
                     className="logo__class"
                     src="/assets/images/logo/logo.svg"
-                    alt="moonlit"
+                    alt="plumhouse"
                   />
                 </Link>
               </div>

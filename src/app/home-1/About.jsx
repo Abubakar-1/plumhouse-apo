@@ -60,7 +60,7 @@ function AboutOne() {
                 About Us
               </span>
               <h2 className="content__title wow fadeInUp">
-                Welcome To Our Moonlit Hotel &amp; Resort
+                Welcome To PlumHouse Apo
               </h2>
               <p
                 className="content__subtitle wow fadeInUp"
