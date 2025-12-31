@@ -8,7 +8,7 @@ import FooterOne from "../../home-1/FooterOne";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import {
-  useCreateBookingMutation,
+  useInitializePaymentMutation,
   useGetPublicRoomByIdQuery,
   useLazyGetRoomAvailabilityQuery,
 } from "../../../../features/api/publicApiSlice";
@@ -61,12 +61,16 @@ function RoomDetailsPage() {
   } = useGetPublicRoomByIdQuery(roomId, { skip });
   const [triggerGetAvailability, { data: availabilityData }] =
     useLazyGetRoomAvailabilityQuery();
-  const [createBooking, { isLoading: isBooking }] = useCreateBookingMutation();
+  const [initializePayment, { isLoading: isInitializingPayment }] =
+    useInitializePaymentMutation();
 
   // --- FORM STATE ---
   const [checkInDate, setCheckInDate] = useState(null);
   const [checkOutDate, setCheckOutDate] = useState(null);
   const [adults, setAdults] = useState(1);
+  const [guestName, setGuestName] = useState("");
+  const [guestPhone, setGuestPhone] = useState("");
+  const [guestEmail, setGuestEmail] = useState("");
   const [children, setChildren] = useState(0); // Kept for potential future use
   const [totalPrice, setTotalPrice] = useState(0);
   const [formError, setFormError] = useState("");
@@ -103,11 +107,10 @@ function RoomDetailsPage() {
       return;
     }
 
-    // In a real app, you'd get these from a modal or separate form fields
     const guestDetails = {
-      guestName: "Guest User",
-      guestEmail: "guest@example.com",
-      guestPhone: "1234567890",
+      guestName: guestName,
+      guestEmail: guestEmail,
+      guestPhone: guestPhone,
     };
 
     const bookingPayload = {
@@ -120,11 +123,15 @@ function RoomDetailsPage() {
     };
 
     try {
-      const result = await createBooking(bookingPayload).unwrap();
-      alert(`Booking successful! Your Booking ID is: ${result.data.bookingId}`);
-      router.push("/"); // Redirect to homepage on success
+      const result = await initializePayment(bookingPayload).unwrap();
+      const paymentUrl = result.data.authorization_url;
+      if (paymentUrl) {
+        window.location.href = paymentUrl;
+      } else {
+        throw new Error("Could not retrieve payment URL.");
+      }
     } catch (err) {
-      console.error("Failed to create booking:", err);
+      console.error("Failed to initialize payment:", err);
       setFormError(
         err.data?.message ||
           "Booking failed. The selected dates might no longer be available."
@@ -271,7 +278,71 @@ function RoomDetailsPage() {
                 >
                   <h5 className="pt-0">Book Your Stay</h5>
                   <div className="advance__search__wrapper">
-                    {/* single input */}
+                    {/* --- New Guest Name Field --- */}
+                    <div
+                      className="query__input wow fadeInUp"
+                      data-wow-delay=".35s"
+                    >
+                      <label htmlFor="guestName" className="query__label">
+                        Guest Name
+                      </label>
+                      <div className="query__input__position">
+                        <input
+                          type="text"
+                          id="guestName"
+                          className="form-control"
+                          placeholder="Enter full name"
+                          // You will need to define guestName and setGuestName in your component state
+                          value={guestName}
+                          onChange={(e) => setGuestName(e.target.value)}
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    {/* --- New Guest Email Field --- */}
+                    <div
+                      className="query__input wow fadeInUp"
+                      data-wow-delay=".4s"
+                    >
+                      <label htmlFor="guestEmail" className="query__label">
+                        Guest Email
+                      </label>
+                      <div className="query__input__position">
+                        <input
+                          type="email"
+                          id="guestEmail"
+                          className="form-control"
+                          placeholder="Enter email address"
+                          value={guestEmail}
+                          onChange={(e) => setGuestEmail(e.target.value)}
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    {/* --- New Guest Phone Field --- */}
+                    <div
+                      className="query__input wow fadeInUp"
+                      data-wow-delay=".45s"
+                    >
+                      <label htmlFor="guestPhone" className="query__label">
+                        Guest Phone
+                      </label>
+                      <div className="query__input__position">
+                        <input
+                          type="tel"
+                          id="guestPhone"
+                          className="form-control"
+                          placeholder="Enter phone number"
+                          // You will need to define guestPhone and setGuestPhone in your component state
+                          value={guestPhone}
+                          onChange={(e) => setGuestPhone(e.target.value)}
+                          required
+                        />
+                      </div>
+                    </div>
+
                     <div className="query__input wow fadeInUp">
                       <label className="query__label">Check In</label>
                       <div className="query__input__position">
@@ -292,8 +363,7 @@ function RoomDetailsPage() {
                         </div>
                       </div>
                     </div>
-                    {/* single input end */}
-                    {/* single input */}
+
                     <div
                       className="query__input wow fadeInUp"
                       data-wow-delay=".3s"
@@ -317,8 +387,7 @@ function RoomDetailsPage() {
                         </div>
                       </div>
                     </div>
-                    {/* single input end */}
-                    {/* single input */}
+
                     <div
                       className="query__input wow fadeInUp"
                       data-wow-delay=".4s"
@@ -348,37 +417,13 @@ function RoomDetailsPage() {
                         </div>
                       </div>
                     </div>
-                    {/* single input end */}
-                    {/* <div className="query__input wow fadeInUp" data-wow-delay=".5s">...child...</div> */}
-                    {/* single input */}
-                    <div
-                      className="query__input wow fadeInUp"
-                      data-wow-delay=".5s"
-                    >
-                      <label htmlFor="room" className="query__label">
-                        Room
-                      </label>
-                      <div className="query__input__position">
-                        <select name="room" id="room" className="form-select">
-                          <option value={1}>1 Room</option>
-                        </select>
-                        <div className="query__input__icon is__svg">
-                          <img src="/assets/images/icon/room.svg" alt="" />
-                        </div>
-                      </div>
-                    </div>
-                    {/* single input end */}
-                    {/* <div className="query__input wow fadeInUp" data-wow-delay=".5s">...extra bed...</div> */}
-                    {/* <h5 className="p-0 mt-20">Extra Services</h5> */}
-                    {/* ...extra services checkboxes... */}
-                    {/* calculation */}
+
                     <div className="total__price">
                       <span className="total h6 mb-0">Total Price</span>
                       <span className="price h6 m-0">
                         ${totalPrice.toFixed(2)}
                       </span>
                     </div>
-                    {/* calculation end */}
                     {formError && (
                       <p
                         style={{
@@ -390,16 +435,18 @@ function RoomDetailsPage() {
                         {formError}
                       </p>
                     )}
-                    {/* submit button */}
                     <button
                       type="submit"
                       className="theme-btn btn-style fill no-border search__btn wow fadeInUp"
                       data-wow-delay=".6s"
-                      disabled={isBooking}
+                      disabled={isInitializingPayment}
                     >
-                      <span>{isBooking ? "Booking..." : "Book Your Room"}</span>
+                      <span>
+                        {isInitializingPayment
+                          ? "Booking..."
+                          : "Book This Room"}
+                      </span>
                     </button>
-                    {/* submit button end */}
                   </div>
                 </form>
               </div>

@@ -55,6 +55,14 @@ export const publicApiSlice = createApi({
         { type: "Booking", id: bookingId },
       ],
     }),
+    initializePayment: builder.mutation<any, any>({
+      query: (bookingData) => ({
+        url: "/bookings/initialize-payment",
+        method: "POST",
+        body: bookingData,
+      }),
+      // No longer invalidates availability here. The webhook is the source of truth.
+    }),
   }),
 });
 
@@ -67,4 +75,5 @@ export const {
   useCreateBookingMutation,
   useGetBookingByPublicIdQuery,
   useLazyGetBookingByPublicIdQuery, // For the "Find My Booking" page
+  useInitializePaymentMutation,
 } = publicApiSlice;
